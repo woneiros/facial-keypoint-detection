@@ -52,13 +52,13 @@ $ source activate fkd
 
 ### With `virtualenv`  
 
-1. Create a virtual env (from within the folder) and activate it:  
+1. Create a virtual env (from within the folder) and activate it:
 ```bash
 $ cd facial-keypoint-detection
 $ virtualenv fkd
 $ source fkd/bin/activate
 ```
-2. Install pre-reqs:  
+2. Install pre-reqs:
 ```bash
 $ pip install -r requirements.txt
 ```
