@@ -1,9 +1,10 @@
 # Data
 
-**Data is not pushed to repo due to size considerations**
+Contains all data related to the competition:
 
-In order to download the data, go to:
+	**`datasets/`** contains the original kaggle data
 
-[Kaggle Facial Keypoints - Data](https://www.kaggle.com/c/facial-keypoints-detection/data)
+	**`submissions/`** contains the csv files submitted to the Kaggle competition
 
+	**`models/`** contains the persistent storages of the models created. Each pickled model contains: name, alias, description, model-object, prediction-df, <training-time>, <predicting-time>
 
