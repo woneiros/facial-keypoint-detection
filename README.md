@@ -21,11 +21,11 @@ The project was developed by: Alex, Ankit, Annalaissa, Nina and Will.
 
 * **`data/`**  
 
-	**`datasets/`** contains the original kaggle data  
+	* **`datasets/`** contains the original kaggle data  
 
-	**`submissions/`** contains the csv files submitted to the Kaggle competition  
+	* **`submissions/`** contains the csv files submitted to the Kaggle competition  
 
-	**`models/`** contains the persistent storages of the models created. Each pickled model contains: name, alias, description, model-object, prediction-df, <training-time>, <predicting-time>  
+	* **`models/`** contains the persistent storages of the models created. Each pickled model contains: name, alias, description, model-object, prediction-df, [training-time], [predicting-time]  
   
 
 ## Pre-requisites
@@ -44,7 +44,6 @@ Use of a **virtual environment** is highly recommended (specially through [*cond
 ### With `conda`
 
 1. (& 2.) Clone the environment as provided in `environment.yml`:
-
 ```bash
 $ conda fkd create -f environment.yml
 $ source activate fkd
@@ -53,16 +52,13 @@ $ source activate fkd
 
 ### With `virtualenv`  
 
-1. Create a virtual env (from within the folder) and activate it:
-
+1. Create a virtual env (from within the folder) and activate it:  
 ```bash
 $ cd facial-keypoint-detection
 $ virtualenv fkd
 $ source fkd/bin/activate
 ```
-
-2. Install pre-reqs:
-
+2. Install pre-reqs:  
 ```bash
 $ pip install -r requirements.txt
 ```
