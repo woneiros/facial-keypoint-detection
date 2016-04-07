@@ -43,22 +43,22 @@ Use of a **virtual environment** is highly recommended (specially through [*cond
 
 ### With `conda`
 
-1. (& 2.) Clone the environment as provided in `environment.yml`:
+	1. (& 2.) Clone the environment as provided in `environment.yml`:
 ```bash
-$ conda fkd create -f environment.yml
+$ conda env create -f environment.yml
 $ source activate fkd
 ```
 
 
 ### With `virtualenv`  
 
-1. Create a virtual env (from within the folder) and activate it:
+	1. Create a virtual env (from within the folder) and activate it:
 ```bash
 $ cd facial-keypoint-detection
 $ virtualenv fkd
 $ source fkd/bin/activate
 ```
-2. Install pre-reqs:
+	2. Install pre-reqs:
 ```bash
 $ pip install -r requirements.txt
 ```
