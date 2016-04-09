@@ -6,7 +6,7 @@
 
 This project contains the explorations on face feature detection (for the [Kaggle competition](https://www.kaggle.com/c/facial-keypoints-detection)), as part of the final project for the 207-Machine Learning course for [Berkeley's Master in Information and Data Science](https://datascience.berkeley.edu/).  
 
-The project was developed by: Alex, Ankit, Annalaissa, Nina and Will.  
+The project was developed by: [Alex](https://github.com/keivahn), [Ankit](https://github.com/ankittharwani), Annalaissa, [Nina](https://github.com/kuknina) and [Will](https://github.com/willahscott).  
 
 
 ## Contents  
@@ -38,30 +38,31 @@ $ git clone https://github.com/WillahScott/facial-keypoint-detection.git
 
 Use of a **virtual environment** is highly recommended (specially through [*conda*](http://conda.pydata.org/docs/using/envs.html)).  
 
-*Should you choose to not create a virtualenv and just install directly on your raw machine just follow step 2 for virtualenv instructions*  
+*Should you choose to not create a virtualenv and just install directly on your raw machine just install the prereqs (follow step 2 for virtualenv instructions)*  
 
 
 ### With `conda`
 
-1. (& 2.) Clone the environment as provided in `environment.yml`:  
+*  Clone the environment as provided in `environment.yml`:  
 ```bash
 $ conda env create -f environment.yml
 $ source activate fkd
 ```
-
+That's it!  
+* For more info on using virtual environments with conda see [here](http://conda.pydata.org/docs/using/envs.html)*
 
 ### With `virtualenv`  
 
-1. Create a virtual env (from within the folder) and activate it:  
-	```bash
-	$ cd facial-keypoint-detection
-	$ virtualenv fkd
-	$ source fkd/bin/activate
-	```  
-2. Install pre-reqs:
-	```bash
-	$ pip install -r requirements.txt
-	```
+* Create a virtual env (from within the folder) and activate it:  
+```bash
+$ cd facial-keypoint-detection
+$ virtualenv fkd
+$ source fkd/bin/activate
+```  
+* Install pre-reqs:
+```bash
+$ pip install -r requirements.txt
+```
   
 
 ## Usage
