@@ -30,7 +30,7 @@ The project was developed by: [Alex](https://github.com/keivahn), [Ankit](https:
 
 ## Pre-requisites
 
-0. First of all clone the repo's folder:
+* First of all clone the repo's folder:
 
 ```bash
 $ git clone https://github.com/WillahScott/facial-keypoint-detection.git
@@ -49,7 +49,7 @@ $ conda env create -f environment.yml
 $ source activate fkd
 ```
 That's it!  
-* For more info on using virtual environments with conda see [here](http://conda.pydata.org/docs/using/envs.html)*
+*For more info on using virtual environments with conda see [here](http://conda.pydata.org/docs/using/envs.html)*
 
 ### With `virtualenv`  
 
