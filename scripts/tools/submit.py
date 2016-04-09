@@ -14,6 +14,10 @@ __project__ = 'fkd'
 
 import numpy as np
 import pandas as pd
+import time
+
+# Feature ID lookup table
+ID_LOOKUP = pd.read_csv('../../data/submissions/IdLookupTable.csv')
 
 
 def create_submission(test, models, label='baseline', verbose=False):
@@ -40,10 +44,7 @@ def create_submission(test, models, label='baseline', verbose=False):
         
         if verbose:
             print 'done! ({:.1f}s)'.format(_elapsed)
-    
-    # create the csv file
-    generate_csv(predicted_df, label)
-    
+        
     return predicted_df
 
 
@@ -64,15 +65,30 @@ def generate_csv(df, label):
     out = out[['RowId','Location']]
     
     # Unpivot data, filter with SampleSubmission
-    unpivot = pd.melt(kn_predictions.reset_index(), id_vars='index')
+    unpivot = pd.melt(out.reset_index(), id_vars='index')
     unpivot.columns = ['ImageId', 'FeatureName', 'Location']
-    scored_sub = pd.merge(id_t[['RowId', 'ImageId', 'FeatureName']], unpivot,
+    scored_sub = pd.merge(ID_LOOKUP[['RowId', 'ImageId', 'FeatureName']], unpivot,
                           on=['ImageId', 'FeatureName'], how='left')
         
     # Export only RowId and Location columns
     final = scored_sub[['RowId','Location']]
-    with open('data/{}_submission.csv'.format(label), 'wb') as f:
+    with open('../../data/submissions/{}_submission.csv'.format(label), 'wb') as f:
         final.to_csv(f, index=False)
     
-    print '... Created the csv file: data/{}_submission.csv'.format(label)
+    print '\n... Created the csv file: ../../data/submissions/{}_submission.csv'.format(label)
+
+
+
+def create_generate(test, models, label='baseline', verbose=False):
+    ''' Predicts using models and generates the csv file for submission.
+    Wrapper for create_submission and generate_csv.
+
+    Usage: >> create_generate( <test_data>, <list_of_models> [, <label> ] )
+    '''
+
+    # predict
+    predicted_df = create_submission(test, models, label, verbose)
+    
+    # create the csv file
+    generate_csv(predicted_df, label)
 
