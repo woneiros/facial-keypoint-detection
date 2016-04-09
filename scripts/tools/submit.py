@@ -1,6 +1,6 @@
 __project__ = 'fkd'
 
-##  SUBMISSION TOOLS module
+##  SUBMISSION - TOOLS module
 #     April, 2016
 #  The following module contains tools for the Kaggle submission of
 #   already trained set of facial keypoint detector models.
@@ -26,6 +26,7 @@ def create_submission(test, models, label='baseline', verbose=False):
         test - test dataset on which to predict
         models - list of tuples: [ (feature, model), ... ]
         label - label for identification of the submission file
+        verbose - print informative status updates
     
     Usage: >> create_submission( <test_data>, <list_of_models> [, <label> ] )
     '''
@@ -39,7 +40,7 @@ def create_submission(test, models, label='baseline', verbose=False):
             print 'Predicting "{}"...'.format(f),
         
         _start = time.time()  # start timer
-        predicted_df[f] = mod.predict(test.iloc[:,0].tolist())
+        predicted_df[f] = mod.predict(test[:,0].tolist())
         _elapsed = time.time() - _start
         
         if verbose:
@@ -82,6 +83,11 @@ def generate_csv(df, label):
 def create_generate(test, models, label='baseline', verbose=False):
     ''' Predicts using models and generates the csv file for submission.
     Wrapper for create_submission and generate_csv.
+    Inputs: 
+        test - test dataset on which to predict
+        models - list of tuples: [ (feature, model), ... ]
+        label - label for identification of the submission file
+        verbose - print informative status updates
 
     Usage: >> create_generate( <test_data>, <list_of_models> [, <label> ] )
     '''
