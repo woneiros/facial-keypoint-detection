@@ -1,6 +1,6 @@
 __project__ = 'fkd'
 
-##  SUBMITION TOOLS module
+##  SUBMISSION TOOLS module
 #     April, 2016
 #  The following module contains tools for the Kaggle submission of
 #   already trained set of facial keypoint detector models.

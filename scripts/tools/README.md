@@ -6,5 +6,5 @@ Some of this tools exist in a primordial state within notebooks of the first exp
 
 ## Contents
 
-* `submit.py` - contains functions for Kaggle submition file generation  
+* `submit.py` - contains functions for Kaggle submission file generation  
 
