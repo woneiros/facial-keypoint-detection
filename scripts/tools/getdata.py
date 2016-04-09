@@ -7,8 +7,7 @@ __project__ = 'fkd'
 ##
 
 ## Contents:
-#	- create_submission
-#	- generate_csv
+#	- load_data
 ##
 
 import pandas as pd

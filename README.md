@@ -44,10 +44,10 @@ Use of a **virtual environment** is highly recommended (specially through [*cond
 ### With `conda`
 
 1. (& 2.) Clone the environment as provided in `environment.yml`:
-	```bash
-	$ conda env create -f environment.yml
-	$ source activate fkd
-	```
+```bash
+$ conda env create -f environment.yml
+$ source activate fkd
+```
 
 
 ### With `virtualenv`  
