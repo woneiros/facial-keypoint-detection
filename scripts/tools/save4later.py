@@ -25,7 +25,7 @@ PATH_PREPRODS = '../../data/preprocessed/'
 ENTRY = "  + {lb} : {ds}"
 
 
-def list_preprod():
+def list_preprods():
 	''' Lists the stored preprocessed datasets '''
 	with open(PATH_PREPRODS + 'index.pk', 'rb') as f:
 		index = pk.load(f)
