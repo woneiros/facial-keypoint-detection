@@ -22,7 +22,7 @@ The easiest way around it is to temporarily add the path to the `scripts/` subfo
 
 ```python
 import sys
-sys.path.append('/Users/will/Github/facial-keypoint-detection/scripts')
+sys.path.append('/PATH-TO-REPO/facial-keypoint-detection/scripts') # Add your path here!
 
 # Import modules from our tools subfolder
 from tools import submit, getdata, save4later
@@ -62,9 +62,9 @@ print 'Test dataset size: ', test_data.shape
 
 #### `save4later`
 
-##### Models
+#### Models
 
-Previous imports necesary:
+Previous imports necesary:  
 **Important all the necessary sklearn classes must be imported prior to loading a model, if not it will fail to load**
 
 ```python
@@ -97,7 +97,7 @@ model = save4later.load_model('KNRegressor')
 And you are set to go.  
 
 
-##### Preprocessed data
+#### Preprocessed data
 
 The same applies, but this time we just need numpy and pandas for previous imports:
 
