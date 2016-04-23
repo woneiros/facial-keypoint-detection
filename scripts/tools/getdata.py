@@ -79,7 +79,7 @@ def load_data(dev, test=False, nonas=True):
 		full_test['img_processed'] = map( get_img, full_test['Image'])
 
 		# Get training data
-		test_data = full_test[['img_processed']].values
+		test_data = full_test['img_processed'].values
 		out_dict['test'] = {'data': test_data}
 
 	return out_dict
