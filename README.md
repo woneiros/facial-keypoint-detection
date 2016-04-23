@@ -6,7 +6,7 @@
 
 This project contains the explorations on face feature detection (for the [Kaggle competition](https://www.kaggle.com/c/facial-keypoints-detection)), as part of the final project for the 207-Machine Learning course for [Berkeley's Master in Information and Data Science](https://datascience.berkeley.edu/).  
 
-The project was developed by: [Alex](https://github.com/keivahn), [Ankit](https://github.com/ankittharwani), Annalaissa, [Nina](https://github.com/kuknina) and [Will](https://github.com/willahscott).  
+The project was developed by: [Alex](https://github.com/keivahn), [Ankit](https://github.com/ankittharwani), [Nina](https://github.com/kuknina) and [Will](https://github.com/willahscott).  
 
 
 ## Contents  
@@ -26,6 +26,8 @@ The project was developed by: [Alex](https://github.com/keivahn), [Ankit](https:
 	* **`submissions/`** contains the csv files submitted to the Kaggle competition  
 
 	* **`models/`** contains the persistent storages of the models created. Each pickled model contains: name, alias, description, model-object, prediction-df, [training-time], [predicting-time]  
+
+	* **`preprocessed/`** contains preprocessed datasets. For *temporal* time-consuming preprocessings   
   
 
 ## Pre-requisites
