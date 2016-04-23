@@ -9,6 +9,12 @@ This project contains the explorations on face feature detection (for the [Kaggl
 The project was developed by: [Alex](https://github.com/keivahn), [Ankit](https://github.com/ankittharwani), [Nina](https://github.com/kuknina) and [Will](https://github.com/willahscott).  
 
 
+## Presentation
+We created a [prezi](https://prezi.com/an_apyqfaeaj/recognizing-key-facial-points/#) to showcase our ideas and explorations:
+
+<iframe id="iframe_container" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" width="550" height="400" src="https://prezi.com/embed/an_apyqfaeaj/?bgcolor=ffffff&amp;lock_to_path=1&amp;autoplay=0&amp;autohide_ctrls=0&amp;landing_data=bHVZZmNaNDBIWnNjdEVENDRhZDFNZGNIUE43MHdLNWpsdFJLb2ZHanI0U2p0UGtZb3daSFJVdjJCK0N2VDJ4TlZRPT0&amp;landing_sign=3XNOqv7OkiStnhLHqFa5OhvNR_NB9wftasVDFuY3Csg"></iframe> 
+
+
 ## Contents  
 
 * **`scripts/`**  
