@@ -9,5 +9,9 @@ The index assumes all datasets have been downloaded and have the same names.
 * `index.pk` - used for listing the available datasets  
 * `test.pk` - test dataset  
 * **`masked.pk`** - faces with background removed. Download from [here](https://drive.google.com/open?id=0B0qYDvWXqrR3M2VwOWxQcm10Rm8)  
-* **`masked_nonas.pk`** - faces with background removed (only noNA faces). Download from [here](https://drive.google.com/open?id=0B0qYDvWXqrR3Zm1fR3BpTmpzeEE)
-* **`sobel_nonas.pk`** - Sobel filter (only faces with no NA features). Download it from [here](https://drive.google.com/open?id=0B0qYDvWXqrR3d0dXaV9iWnduRVE)
+* **`masked_nonas.pk`** - faces with background removed (only noNA faces). Download from [here](https://drive.google.com/open?id=0B0qYDvWXqrR3Zm1fR3BpTmpzeEE)  
+* **`sobel_nonas.pk`** - Sobel filter (only faces with no NA features). Download it from [here](https://drive.google.com/open?id=0B0qYDvWXqrR3d0dXaV9iWnduRVE)  
+* **`bhog_nonas.pk`** : Blurred HOG (only faces with no NA features). Download from [here](https://drive.google.com/open?id=0B0qYDvWXqrR3WnJ2dlJZWDY4MUE)  
++ **`lapgauss_nonas.pk`** : Laplace+Gaussian transform (only faces with no NA features). Download from [here](https://drive.google.com/open?id=0B0qYDvWXqrR3SmtnUFZ4eVdxaHc)  
++ **`gauss_nonas.pk`** : Blurred images (only faces with no NA features). Download from [here](https://drive.google.com/open?id=0B0qYDvWXqrR3LTR5SmxMbHJKZU0)  
+
