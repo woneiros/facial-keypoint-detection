@@ -7,4 +7,8 @@ sS'test.pk'
 p4
 S'This is a test'
 p5
+sS'masked_nonas.pk'
+p6
+S'Masked data (only faces with no NA features)'
+p7
 s.
