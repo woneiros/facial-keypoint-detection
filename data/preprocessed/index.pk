@@ -1,14 +1,34 @@
 (dp1
-S'masked.pk'
+S'bhog_nonas.pk'
 p2
-S'Masked data (removed background of all faces)'
+S'Blurred HOG (only faces with no NA features)'
 p3
-sS'test.pk'
+sS'sobel_nonas.pk'
 p4
-S'This is a test'
+S'Sobel filter (only faces with no NA features)'
 p5
 sS'masked_nonas.pk'
 p6
 S'Masked data (only faces with no NA features)'
 p7
+sS'masked.pk'
+p8
+S'Masked data (removed background of all faces)'
+p9
+sS'lapgauss_nonas.pk'
+p10
+S'Laplace+Gaussian transform (only faces with no NA features)'
+p11
+sS'test.pk'
+p12
+S'This is a test'
+p13
+sS'orig_sobel_nonas.pk'
+p14
+S'Original + Sobel filter (only faces with no NA features)'
+p15
+sS'gauss_nonas.pk'
+p16
+S'Blurred images (only faces with no NA features)'
+p17
 s.
