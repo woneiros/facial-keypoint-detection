@@ -30,10 +30,10 @@ def list_preprods():
 	with open(PATH_PREPRODS + 'index.pk', 'rb') as f:
 		index = pk.load(f)
 
-	print "\n    PREPROC\'D DATASETS\n    ===================\n Total:", len(index)
+	print "\n    PREPROC\'D DATASETS\n    ===================\n Total: {}\n".format(len(index))
 
 	for k,_v in index.iteritems():
-		print ENTRY.format(lb=k, ds=v['description'])
+		print ENTRY.format(lb=k, ds=_v)
 
 
 def save_preprod(preprod, label, description=None, overwrite=False):
@@ -42,7 +42,7 @@ def save_preprod(preprod, label, description=None, overwrite=False):
 	if label[-2:] != ".pk":
 		label += ".pk"
 
-	if os.path.isfile(PATH_PREPRODS + label) and !overwrite:
+	if os.path.isfile(PATH_PREPRODS + label) and not overwrite:
 		print 'WARNING - file exists. For overwriting specify overwrite=True'
 		return
 
@@ -92,10 +92,10 @@ def list_models():
 	with open(PATH_MODELS + 'index.pk', 'rb') as f:
 		index = pk.load(f)
 
-	print "\n    STORED MODELS\n    =============\n Total:", len(index)
+	print "\n    STORED MODELS\n    =============\n Total: {}\n".format(len(index))
 
 	for k,_v in index.iteritems():
-		print ENTRY.format(lb=k, ds=v['description'])
+		print ENTRY.format(lb=k, ds=_v)
 
 
 def save_model(model, label, description=None, overwrite=False):
@@ -104,7 +104,7 @@ def save_model(model, label, description=None, overwrite=False):
 	if label[-2:] != ".pk":
 		label += ".pk"
 
-	if os.path.isfile(PATH_MODELS + label) and !overwrite:
+	if os.path.isfile(PATH_MODELS + label) and not overwrite:
 		print 'WARNING - file exists. For overwriting specify overwrite=True'
 		return
 
