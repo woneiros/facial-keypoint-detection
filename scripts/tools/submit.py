@@ -40,7 +40,7 @@ def create_submission(test, models, label='baseline', verbose=False):
             print 'Predicting "{}"...'.format(f),
         
         _start = time.time()  # start timer
-        predicted_df[f] = mod.predict(test[:,0].tolist())
+        predicted_df[f] = mod.predict(test.tolist())
         _elapsed = time.time() - _start
         
         if verbose:
