@@ -11,9 +11,9 @@ sS'masked_nonas.pk'
 p6
 S'Masked data (only faces with no NA features)'
 p7
-sS'masked.pk'
+sS'orig_sobel_nonas.pk'
 p8
-S'Masked data (removed background of all faces)'
+S'Original + Sobel filter (only faces with no NA features)'
 p9
 sS'lapgauss_nonas.pk'
 p10
@@ -23,9 +23,9 @@ sS'test.pk'
 p12
 S'This is a test'
 p13
-sS'orig_sobel_nonas.pk'
+sS'masked.pk'
 p14
-S'Original + Sobel filter (only faces with no NA features)'
+S'Masked data (removed background of all faces)'
 p15
 sS'gauss_nonas.pk'
 p16
