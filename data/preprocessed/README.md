@@ -9,4 +9,5 @@ The index assumes all datasets have been downloaded and have the same names.
 * `index.pk` - used for listing the available datasets  
 * `test.pk` - test dataset  
 * **`masked.pk`** - faces with background removed. Download from [here](https://drive.google.com/open?id=0B0qYDvWXqrR3M2VwOWxQcm10Rm8)  
+* **`masked_nonas.pk`** - faces with background removed (only noNA faces). Download from [here](https://drive.google.com/open?id=0B0qYDvWXqrR3Zm1fR3BpTmpzeEE)
 
