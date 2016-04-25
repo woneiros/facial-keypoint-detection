@@ -58,23 +58,21 @@ def generate_csv(df, label):
     
     Usage: >> generate_csv(<data_frame_with_predictions>, <label>)
     '''
+
+    # Get full flat frame, (unpivot data)
+    df['ImageId'] = np.arange(1,len(df)+1)
+    out = pd.melt(df.reset_index(), id_vars=['index','ImageId'])
+    out.columns = ['index', 'ImageId', 'FeatureName', 'Location']
+
+    # Merge with SampleSubmission
+    final = pd.merge(ID_LOOKUP[['RowId', 'ImageId', 'FeatureName']],
+                     out[['ImageId', 'FeatureName', 'Location']],
+                     on=['ImageId', 'FeatureName'], how='left')
     
-    # Get full flat frame
-    out = pd.DataFrame()
-    out['Location'] = df.values.flatten()
-    out['RowId'] = np.arange(1,len(out)+1)
-    out = out[['RowId','Location']]
-    
-    # Unpivot data, filter with SampleSubmission
-    unpivot = pd.melt(out.reset_index(), id_vars='index')
-    unpivot.columns = ['ImageId', 'FeatureName', 'Location']
-    scored_sub = pd.merge(ID_LOOKUP[['RowId', 'ImageId', 'FeatureName']], unpivot,
-                          on=['ImageId', 'FeatureName'], how='left')
-        
     # Export only RowId and Location columns
-    final = scored_sub[['RowId','Location']]
+    sumission = final[['RowId', 'Location']]
     with open('../../data/submissions/{}_submission.csv'.format(label), 'wb') as f:
-        final.to_csv(f, index=False)
+        sumission.to_csv(f, index=False)
     
     print '\n... Created the csv file: ../../data/submissions/{}_submission.csv'.format(label)
 
