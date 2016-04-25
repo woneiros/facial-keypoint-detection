@@ -1,22 +1,42 @@
 (dp1
-S'MultinomialNB.pk'
+S'DecTreeLapgauss.pk'
 p2
-S'Multinomial naive bayes with non-preprocessed data with no NAs'
+S'Decision Tree Laplace Gauss'
 p3
-sS'nnBhog.pk'
-p4
-S'NN on Blur HOG'
-p5
 sS'nnSobel.pk'
-p6
+p4
 S'NN on Sobel Filter'
+p5
+sS'DecTreeSobel.pk'
+p6
+S'Decision Tree Sobel'
 p7
-sS'nnMasked.pk'
+sS'DecTreeMasked.pk'
 p8
-S'NN on Masked Faces'
+S'Decision Tree Masked'
 p9
-sS'nnOrigData.pk'
+sS'MultinomialNB.pk'
 p10
-S'NN on Original Data'
+S'Multinomial naive bayes with non-preprocessed data with no NAs'
 p11
+sS'nnMasked.pk'
+p12
+S'NN on Masked Faces'
+p13
+sS'nnOrigData.pk'
+p14
+S'NN on Original Data'
+p15
+sS'DecTree.pk'
+p16
+S'Decision Tree Original Data'
+p17
+sS'DecTreeBhog.pk'
+p18
+S'Decision Tree BHOG'
+p19
+sS'nnBhog.pk'
+p20
+S'NN on Blur HOG'
+p21
 s.
