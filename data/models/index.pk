@@ -3,8 +3,20 @@ S'MultinomialNB.pk'
 p2
 S'Multinomial naive bayes with non-preprocessed data with no NAs'
 p3
-sS'nnOrigData.pk'
+sS'nnBhog.pk'
 p4
-S'NN on Original Data'
+S'NN on Blur HOG'
 p5
+sS'nnSobel.pk'
+p6
+S'NN on Sobel Filter'
+p7
+sS'nnMasked.pk'
+p8
+S'NN on Masked Faces'
+p9
+sS'nnOrigData.pk'
+p10
+S'NN on Original Data'
+p11
 s.
