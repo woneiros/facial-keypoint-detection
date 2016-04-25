@@ -96,3 +96,16 @@ def create_generate(test, models, label='baseline', verbose=False):
     # create the csv file
     generate_csv(predicted_df, label)
 
+
+def create_generate_NN(predictions, columns, label='NN_base'):
+    ''' Generates the csv file for submission for the predictions of a NN models
+    Inputs: 
+        predictions - predicted test values
+        columns - the feature names (use FEATURES as loaded from getdata)
+        label - label for identification of the submission file
+
+    Usage: >> create_generate_NN( <y_pred>, FEATURES , <label> ] )
+    '''
+    predicted_df = pd.DataFrame(predictions, columns=columns)
+    generate_csv(predicted_df, label)
+
