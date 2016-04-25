@@ -58,23 +58,21 @@ def generate_csv(df, label):
     
     Usage: >> generate_csv(<data_frame_with_predictions>, <label>)
     '''
+
+    # Get full flat frame, (unpivot data)
+    df['ImageId'] = np.arange(1,len(df)+1)
+    out = pd.melt(df.reset_index(), id_vars=['index','ImageId'])
+    out.columns = ['index', 'ImageId', 'FeatureName', 'Location']
+
+    # Merge with SampleSubmission
+    final = pd.merge(ID_LOOKUP[['RowId', 'ImageId', 'FeatureName']],
+                     out[['ImageId', 'FeatureName', 'Location']],
+                     on=['ImageId', 'FeatureName'], how='left')
     
-    # Get full flat frame
-    out = pd.DataFrame()
-    out['Location'] = df.values.flatten()
-    out['RowId'] = np.arange(1,len(out)+1)
-    out = out[['RowId','Location']]
-    
-    # Unpivot data, filter with SampleSubmission
-    unpivot = pd.melt(out.reset_index(), id_vars='index')
-    unpivot.columns = ['ImageId', 'FeatureName', 'Location']
-    scored_sub = pd.merge(ID_LOOKUP[['RowId', 'ImageId', 'FeatureName']], unpivot,
-                          on=['ImageId', 'FeatureName'], how='left')
-        
     # Export only RowId and Location columns
-    final = scored_sub[['RowId','Location']]
+    sumission = final[['RowId', 'Location']]
     with open('../../data/submissions/{}_submission.csv'.format(label), 'wb') as f:
-        final.to_csv(f, index=False)
+        sumission.to_csv(f, index=False)
     
     print '\n... Created the csv file: ../../data/submissions/{}_submission.csv'.format(label)
 
@@ -96,5 +94,18 @@ def create_generate(test, models, label='baseline', verbose=False):
     predicted_df = create_submission(test, models, label, verbose)
     
     # create the csv file
+    generate_csv(predicted_df, label)
+
+
+def create_generate_NN(predictions, columns, label='NN_base'):
+    ''' Generates the csv file for submission for the predictions of a NN models
+    Inputs: 
+        predictions - predicted test values
+        columns - the feature names (use FEATURES as loaded from getdata)
+        label - label for identification of the submission file
+
+    Usage: >> create_generate_NN( <y_pred>, FEATURES , <label> ] )
+    '''
+    predicted_df = pd.DataFrame(predictions, columns=columns)
     generate_csv(predicted_df, label)
 
