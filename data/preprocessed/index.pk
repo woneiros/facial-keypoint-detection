@@ -3,32 +3,40 @@ S'bhog_nonas.pk'
 p2
 S'Blurred HOG (only faces with no NA features)'
 p3
-sS'sobel_nonas.pk'
+sS'test.pk'
 p4
-S'Sobel filter (only faces with no NA features)'
+S'This is a test'
 p5
 sS'masked_nonas.pk'
 p6
 S'Masked data (only faces with no NA features)'
 p7
-sS'orig_sobel_nonas.pk'
+sS'pca_trained.pk'
 p8
-S'Original + Sobel filter (only faces with no NA features)'
+S'trained data transormed with 250-component PCA'
 p9
-sS'lapgauss_nonas.pk'
+sS'pca_transformed.pk'
 p10
-S'Laplace+Gaussian transform (only faces with no NA features)'
+S'test data transormed with 250-component PCA'
 p11
-sS'test.pk'
+sS'orig_sobel_nonas.pk'
 p12
-S'This is a test'
+S'Original + Sobel filter (only faces with no NA features)'
 p13
-sS'masked.pk'
+sS'lapgauss_nonas.pk'
 p14
-S'Masked data (removed background of all faces)'
+S'Laplace+Gaussian transform (only faces with no NA features)'
 p15
-sS'gauss_nonas.pk'
+sS'sobel_nonas.pk'
 p16
-S'Blurred images (only faces with no NA features)'
+S'Sobel filter (only faces with no NA features)'
 p17
+sS'masked.pk'
+p18
+S'Masked data (removed background of all faces)'
+p19
+sS'gauss_nonas.pk'
+p20
+S'Blurred images (only faces with no NA features)'
+p21
 s.
