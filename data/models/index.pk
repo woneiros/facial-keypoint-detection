@@ -1,10 +1,38 @@
 (dp1
-S'MultinomialNB.pk'
+S'Multi_NB_sobel.pk'
 p2
-S'Multinomial naive bayes with non-preprocessed data with no NAs'
+S'Multinomial naive bayes with sobel data with no NAs'
 p3
-sS'nnOrigData.pk'
+sS'Multi_NB_mask.pk'
 p4
-S'NN on Original Data'
+S'Multinomial naive bayes with masked data with no NAs'
 p5
+sS'Multi_NB_LapG.pk'
+p6
+S'Multinomial naive bayes with Laplace and Gaussian transformed data with no NAs'
+p7
+sS'MultinomialNB.pk'
+p8
+S'Multinomial naive bayes with non-preprocessed data with no NAs'
+p9
+sS'Multi_NB_gauss.pk'
+p10
+S'Multinomial naive bayes with Gaussian blurred data with no NAs'
+p11
+sS'nnOrigData.pk'
+p12
+S'NN on Original Data'
+p13
+sS'Multi_NB.pk'
+p14
+S'Multinomial naive bayes without preprocessed data with no NAs'
+p15
+sS'Multi_NB_HOG.pk'
+p16
+S'Multinomial naive bayes with blurred HOG data with no NAs'
+p17
+sS'MultinomialNB_Mask.pk'
+p18
+S'Multinomial naive bayes with masked data with no NAs'
+p19
 s.
