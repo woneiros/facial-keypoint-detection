@@ -21,11 +21,16 @@ from ..tools import submit
 The easiest way around it is to temporarily add the path to the `scripts/` subfolder to our `python path` (the set of locations in which python will look to import packages). Basically:  
 
 ```python
-import sys
-sys.path.append('/PATH-TO-REPO/facial-keypoint-detection/scripts') # Add your path here!
+# necessary for setting path
+import sys, os
 
-# Import modules from our tools subfolder
-from tools import submit, getdata, save4later
+# add facial-keypoint-detection/scripts to the Python path
+pathArr = os.getcwd().split("/")
+scriptPath = '/'.join(map(str, pathArr[:len(pathArr)-1]))
+sys.path.append(scriptPath)
+
+# import my tools
+from tools import save4later, getdata, submit
 ```
 
 
