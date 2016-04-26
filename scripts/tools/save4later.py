@@ -37,7 +37,15 @@ def list_preprods():
 
 
 def save_preprod(preprod, label, description=None, overwrite=False):
-	''' Saves a specific preprocessed dataset with a given label and description '''
+	''' Saves a specific preprocessed dataset with a given label and description 
+	
+		Inputs:
+			preprod - dataset to save
+			label - name of the file in which the dataset will be saved (extension not neessary)
+			description - [Optional] human-readable description of the dataset saved (strongly recommended)
+			overwirte - [Optional] boolean, necessary to be set to True for overwriting a file 
+
+	'''
 	# add extension if necessary
 	if label[-2:] != ".pk":
 		label += ".pk"
